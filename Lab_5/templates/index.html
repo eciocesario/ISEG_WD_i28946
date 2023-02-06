@@ -3,9 +3,19 @@
         <title>User Management</title>
     </head>
     <body>
-        <p>Welcome {{ username }}</p>
-        <form action="{{ url_for('app.home_controller') }}" method="post">
-            <p><input type="submit" value="Logout"></p>
+        {% if error %}
+            <p style="color:red">{{ error }}</p>
+        {% endif %}
+        <form action="{{ url_for('app.login_controller') }}" method="post">
+            <p>Username: <input type="text" name="username"></p>
+            <p>Password: <input type="password" name="password"></p>
+            <p><input type="submit" value="Login"></p>
+        </form>
+        <form action="{{ url_for('app.register_controller') }}" method="post">
+            <p>Username: <input type="text" name="username"></p>
+            <p>Password: <input type="password" name="password"></p>
+            <p><input type="submit" value="Register"></p>
         </form>
     </body>
 </html>
+

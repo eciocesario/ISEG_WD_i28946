@@ -1,5 +1,5 @@
 from flask import Flask
-import controllers5, models5
+import controllers, models
 
 app = Flask(__name__)
 app.secret_key = 'secret_key'
