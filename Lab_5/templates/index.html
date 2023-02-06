@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title>User Management</title>
+    </head>
+    <body>
+        <p>Welcome {{ username }}</p>
+        <form action="{{ url_for('app.home_controller') }}" method="post">
+            <p><input type="submit" value="Logout"></p>
+        </form>
+    </body>
+</html>
